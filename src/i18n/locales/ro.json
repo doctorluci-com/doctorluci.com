@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "about": "Despre",
+    "services": "Servicii",
+    "steps": "Etape",
+    "testimonials": "Testimoniale",
+    "appointment": "Programare",
+    "contact": "Contact",
+    "book": "Programează-te"
+  },
+  "hero": {
+    "eyebrow": "Medic ORL · Doctor în Științe Medicale",
+    "title": "Salut, sunt Lucia Gariuc — Medic ORL",
+    "subtitle": "Medicina simțului și promovarea proiectului social «Kids of Lucia». Îngrijire ORL atentă, ghidare clară și sprijin pentru fiecare pacient.",
+    "ctaPrimary": "Programează-te",
+    "ctaSecondary": "Află mai multe",
+    "imageAlt": "Dr. Lucia Gariuc, medic ORL"
+  },
+  "bookPromo": {
+    "eyebrow": "Cartea Mea",
+    "title": "Ghid Complet de Sănătate ORL",
+    "subtitle": "Descoperă principiile esențiale pentru sănătatea urechilor, nasului și gâtului. Cumpără ediția digitală și primește-o instant pe email.",
+    "emailPlaceholder": "Adresa ta de email",
+    "buyNow": "Cumpără Acum",
+    "success": "Redirecționare către plată securizată..."
+  },
+  "highlights": {
+    "title": "Ce ofer",
+    "subtitle": "O abordare medicală completă, centrată pe pacient.",
+    "items": {
+      "consult": {
+        "title": "Consultații ORL",
+        "desc": "Diagnostic și tratament pentru afecțiuni ale urechii, nasului și gâtului."
+      },
+      "kids": {
+        "title": "Proiectul Kids of Lucia",
+        "desc": "Inițiativă socială dedicată sănătății copiilor."
+      },
+      "edu": {
+        "title": "Educație Medicală",
+        "desc": "Workshopuri și sesiuni de informare pentru pacienți."
+      },
+      "mentor": {
+        "title": "Mentorat & Coaching",
+        "desc": "Ghidare personalizată spre un stil de viață sănătos."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Despre mine",
+    "name": "Dr. Lucia Gariuc",
+    "title": "Doctor în Științe Medicale",
+    "bio": "Cred cu tărie că sănătatea nu este doar absența bolii, ci un echilibru profund între corp, minte și stil de viață. Pentru mine, sănătatea înseamnă armonie, atenție și grijă constantă față de sine. În activitatea mea, îmi propun să schimb perspectiva asupra sănătății: să nu o privim ca pe o obligație impusă, ci ca pe o alegere conștientă și un act de respect față de propria persoană. Fiecare decizie zilnică contează și contribuie la construirea unui viitor mai sănătos. Cred în importanța educației medicale și în puterea informației corecte. Atunci când învățăm să ne ascultăm corpul, învățăm, de fapt, să ne protejăm viitorul. Misiunea mea este să transform informația în claritate, iar claritatea în acțiune — oferind ghidare, sprijin și soluții adaptate fiecărei persoane.",
+    "more": "Mai multe despre mine"
+  },
+  "quotes": {
+    "title": "Inspirație zilnică",
+    "items": [
+      "Sănătatea este cel mai prețios dar — învață să o asculți zilnic.",
+      "Prevenția începe cu o întrebare: cum mă simt cu adevărat astăzi?",
+      "Un corp ascultat este un corp protejat.",
+      "Educația medicală transformă frica în claritate, iar claritatea în acțiune."
+    ]
+  },
+  "steps": {
+    "eyebrow": "Cum lucrăm împreună",
+    "title": "Cinci pași spre sănătatea ta",
+    "items": [
+      {
+        "title": "Contactează-mă",
+        "desc": "Trimite-mi un mesaj sau sună direct pentru a discuta situația ta."
+      },
+      {
+        "title": "Programează o Consultație",
+        "desc": "Alegem împreună data și ora cea mai convenabilă."
+      },
+      {
+        "title": "Analiza Profilului Tău",
+        "desc": "Evaluez istoricul medical și nevoile tale specifice."
+      },
+      {
+        "title": "Plan Personalizat",
+        "desc": "Stabilim pași concreți de tratament sau prevenție."
+      },
+      {
+        "title": "Urmărire și Suport",
+        "desc": "Rămân alături de tine pe tot parcursul procesului."
+      }
+    ],
+    "cta": "Contactează-mă!"
+  },
+  "newsletter": {
+    "title": "Vrei să trăiești mai sănătos?",
+    "subtitle": "Introdu numele și adresa de email pentru a solicita ghidul meu gratuit de sănătate ORL. Voi analiza solicitarea și ți-l voi trimite în cel mai scurt timp.",
+    "name": "Numele tău",
+    "email": "Adresa de email",
+    "submit": "Solicită Ghidul",
+    "success": "Solicitarea ta a fost recepționată! Dr. Lucia Gariuc o va analiza și îți va trimite ghidul pe email în curând.",
+    "successTitle": "Solicitare Recepționată",
+    "requestAnother": "Solicită un alt ghid",
+    "error": "A apărut o eroare. Te rugăm să încerci din nou.",
+    "tooManyRequests": "Prea multe solicitări. Te rugăm să încerci din nou peste 15 minute."
+  },
+  "appointment": {
+    "eyebrow": "Programare",
+    "title": "Programează o Consultație",
+    "subtitle": "Alege un interval orar disponibil și completează formularul.",
+    "selectTime": "Alege ora",
+    "name": "Nume complet",
+    "phone": "Telefon",
+    "email": "Email",
+    "message": "Mesaj (simptome, întrebări)",
+    "submit": "Trimite Cererea",
+    "selected": "Ora selectată",
+    "available": "disponibil",
+    "unavailable": "ocupat",
+    "success": "Cererea a fost trimisă. Te contactez în curând.",
+    "pickTime": "Te rog selectează o oră disponibilă."
+  },
+  "testimonials": {
+    "eyebrow": "Pacienți",
+    "title": "Ce spun pacienții mei",
+    "items": [
+      {
+        "name": "Andrei M.",
+        "text": "Profesionalism și empatie. Dr. Lucia a explicat totul cu răbdare și am plecat cu un plan clar de tratament."
+      },
+      {
+        "name": "Maria T.",
+        "text": "Mă simt în sfârșit ascultată. Diagnosticul a fost precis, iar recuperarea mult mai rapidă decât mă așteptam."
+      },
+      {
+        "name": "Elena V.",
+        "text": "O experiență excelentă pentru copilul meu. Cabinet primitor și o doctoriță minunată cu cei mici."
+      },
+      {
+        "name": "Ștefan P.",
+        "text": "Recomand cu toată încrederea. Comunicare clară și soluții concrete, fără tratamente inutile."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Medicina simțului — îngrijire ORL atentă, educație și sprijin pentru fiecare pacient.",
+    "quickLinks": "Linkuri rapide",
+    "contact": "Contact",
+    "address": "Chișinău, Republica Moldova",
+    "follow": "Urmărește-mă",
+    "language": "Limbă",
+    "rights": "© 2026 Dr. Lucia Gariuc. Toate drepturile rezervate."
+  },
+  "cart": {
+    "addToCart": "Adaugă în coș",
+    "viewCart": "Vezi coșul",
+    "continueShopping": "Continuă cumpărăturile",
+    "yourCart": "Coșul tău",
+    "empty": "Coșul tău este gol.",
+    "total": "Total",
+    "checkout": "Finalizează comanda",
+    "remove": "Elimină",
+    "emailPlaceholder": "Email pentru livrarea digitală"
+  }
+}

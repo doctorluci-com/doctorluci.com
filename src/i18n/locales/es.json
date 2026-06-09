@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "services": "Servicios",
+    "steps": "Etapas",
+    "testimonials": "Testimonios",
+    "appointment": "Cita",
+    "contact": "Contacto",
+    "book": "Reservar cita"
+  },
+  "hero": {
+    "eyebrow": "Médico ORL · Doctora en Ciencias Médicas",
+    "title": "Hola, soy Lucia Gariuc — Médico ORL",
+    "subtitle": "La medicina de los sentidos y la iniciativa social «Kids of Lucia». Atención ORL cuidadosa, orientación clara y apoyo para cada paciente.",
+    "ctaPrimary": "Reservar cita",
+    "ctaSecondary": "Saber más",
+    "imageAlt": "Dra. Lucia Gariuc, médico ORL"
+  },
+  "bookPromo": {
+    "eyebrow": "Mi Libro",
+    "title": "Guía Completa de Salud ORL",
+    "subtitle": "Descubre los principios esenciales de la salud de oídos, nariz y garganta. Compra la edición digital ahora y recíbela al instante por correo electrónico.",
+    "emailPlaceholder": "Tu correo electrónico",
+    "buyNow": "Comprar Ahora",
+    "success": "Redirigiendo al pago seguro..."
+  },
+  "highlights": {
+    "title": "Lo que ofrezco",
+    "subtitle": "Un enfoque médico integral, centrado en el paciente.",
+    "items": {
+      "consult": {
+        "title": "Consultas ORL",
+        "desc": "Diagnóstico y tratamiento de afecciones de oído, nariz y garganta."
+      },
+      "kids": {
+        "title": "Proyecto Kids of Lucia",
+        "desc": "Iniciativa social dedicada a la salud de los niños."
+      },
+      "edu": {
+        "title": "Educación médica",
+        "desc": "Talleres y sesiones informativas para pacientes."
+      },
+      "mentor": {
+        "title": "Mentoría y coaching",
+        "desc": "Acompañamiento personalizado hacia un estilo de vida saludable."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Sobre mí",
+    "name": "Dra. Lucia Gariuc",
+    "title": "Doctora en Ciencias Médicas",
+    "bio": "Creo firmemente que la salud no es solo la ausencia de enfermedad, sino un equilibrio profundo entre cuerpo, mente y estilo de vida. Para mí, salud significa armonía, atención y cuidado constante de uno mismo. En mi trabajo, busco cambiar la perspectiva sobre la salud: no verla como una obligación impuesta, sino como una elección consciente y un acto de respeto hacia uno mismo. Cada decisión diaria cuenta y contribuye a un futuro más saludable. Creo en la importancia de la educación médica y en el poder de la información correcta. Cuando aprendemos a escuchar nuestro cuerpo, en realidad aprendemos a proteger nuestro futuro. Mi misión es transformar la información en claridad, y la claridad en acción, ofreciendo orientación, apoyo y soluciones adaptadas a cada persona.",
+    "more": "Más sobre mí"
+  },
+  "quotes": {
+    "title": "Inspiración diaria",
+    "items": [
+      "La salud es el regalo más valioso: aprende a escucharla cada día.",
+      "La prevención empieza con una pregunta: ¿cómo me siento realmente hoy?",
+      "Un cuerpo escuchado es un cuerpo protegido.",
+      "La educación médica convierte el miedo en claridad, y la claridad en acción."
+    ]
+  },
+  "steps": {
+    "eyebrow": "Cómo trabajamos juntos",
+    "title": "Cinco pasos hacia tu salud",
+    "items": [
+      {
+        "title": "Contáctame",
+        "desc": "Envía un mensaje o llama directamente para hablar de tu situación."
+      },
+      {
+        "title": "Reserva una consulta",
+        "desc": "Elegimos juntos la fecha y la hora más convenientes."
+      },
+      {
+        "title": "Análisis de tu perfil",
+        "desc": "Reviso tu historial médico y tus necesidades específicas."
+      },
+      {
+        "title": "Plan personalizado",
+        "desc": "Definimos pasos concretos de tratamiento o prevención."
+      },
+      {
+        "title": "Seguimiento y apoyo",
+        "desc": "Estoy a tu lado durante todo el proceso."
+      }
+    ],
+    "cta": "¡Contáctame!"
+  },
+  "newsletter": {
+    "title": "¿Quieres vivir más sano?",
+    "subtitle": "Introduce tu nombre y email para solicitar mi guía gratuita de salud ORL. Revisaré tu solicitud y te la enviaré en breve.",
+    "name": "Tu nombre",
+    "email": "Correo electrónico",
+    "submit": "Solicitar Guía",
+    "success": "¡Tu solicitud ha sido recibida! La Dra. Lucia Gariuc la revisará y te enviará la guía por email pronto.",
+    "successTitle": "Solicitud Recibida",
+    "requestAnother": "Solicitar otra guía",
+    "error": "Ocurrió un error. Por favor, inténtelo de nuevo.",
+    "tooManyRequests": "Demasiadas solicitudes. Por favor, inténtelo de nuevo después de 15 minutos."
+  },
+  "appointment": {
+    "eyebrow": "Cita",
+    "title": "Reserva una consulta",
+    "subtitle": "Elige un horario disponible y completa el formulario.",
+    "selectTime": "Elige una hora",
+    "name": "Nombre completo",
+    "phone": "Teléfono",
+    "email": "Email",
+    "message": "Mensaje (síntomas, preguntas)",
+    "submit": "Enviar solicitud",
+    "selected": "Hora seleccionada",
+    "available": "disponible",
+    "unavailable": "ocupado",
+    "success": "Tu solicitud ha sido enviada. Te contactaré pronto.",
+    "pickTime": "Por favor, elige una hora disponible."
+  },
+  "testimonials": {
+    "eyebrow": "Pacientes",
+    "title": "Lo que dicen mis pacientes",
+    "items": [
+      {
+        "name": "Andrei M.",
+        "text": "Profesionalismo y empatía. La Dra. Lucia me lo explicó todo con paciencia y salí con un plan de tratamiento claro."
+      },
+      {
+        "name": "Maria T.",
+        "text": "Por fin me sentí escuchada. El diagnóstico fue preciso y la recuperación mucho más rápida de lo esperado."
+      },
+      {
+        "name": "Elena V.",
+        "text": "Una experiencia excelente para mi hijo. Consulta acogedora y una doctora maravillosa con los pequeños."
+      },
+      {
+        "name": "Ștefan P.",
+        "text": "La recomiendo con total confianza. Comunicación clara y soluciones concretas, sin tratamientos innecesarios."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "La medicina de los sentidos — atención ORL cuidadosa, educación y apoyo para cada paciente.",
+    "quickLinks": "Enlaces rápidos",
+    "contact": "Contacto",
+    "address": "Chișinău, República de Moldavia",
+    "follow": "Sígueme",
+    "language": "Idioma",
+    "rights": "© 2026 Dra. Lucia Gariuc. Todos los derechos reservados."
+  },
+  "cart": {
+    "addToCart": "Añadir al carrito",
+    "viewCart": "Ver carrito",
+    "continueShopping": "Seguir comprando",
+    "yourCart": "Tu carrito",
+    "empty": "Tu carrito está vacío.",
+    "total": "Total",
+    "checkout": "Finalizar compra",
+    "remove": "Eliminar",
+    "emailPlaceholder": "Correo electrónico"
+  }
+}

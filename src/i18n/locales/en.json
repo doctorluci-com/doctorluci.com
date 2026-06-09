@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "steps": "Steps",
+    "testimonials": "Testimonials",
+    "appointment": "Appointment",
+    "contact": "Contact",
+    "book": "Book Appointment"
+  },
+  "hero": {
+    "eyebrow": "ENT Physician · Doctor of Medical Sciences",
+    "title": "Hello, I'm Lucia Gariuc — ENT Physician",
+    "subtitle": "The medicine of the senses and the social initiative «Kids of Lucia». Attentive ENT care, clear guidance and support for every patient.",
+    "ctaPrimary": "Book a visit",
+    "ctaSecondary": "Learn more",
+    "imageAlt": "Dr. Lucia Gariuc, ENT physician"
+  },
+  "bookPromo": {
+    "eyebrow": "My Book",
+    "title": "A Complete Guide to ENT Health",
+    "subtitle": "Discover the essential principles of ear, nose and throat health. Buy the digital edition now and receive it instantly via email.",
+    "emailPlaceholder": "Your email address",
+    "buyNow": "Buy Now",
+    "success": "Redirecting to secure checkout..."
+  },
+  "highlights": {
+    "title": "What I offer",
+    "subtitle": "A complete, patient-centered medical approach.",
+    "items": {
+      "consult": {
+        "title": "ENT Consultations",
+        "desc": "Diagnosis and treatment for ear, nose and throat conditions."
+      },
+      "kids": {
+        "title": "Kids of Lucia Project",
+        "desc": "A social initiative dedicated to children's health."
+      },
+      "edu": {
+        "title": "Medical Education",
+        "desc": "Workshops and information sessions for patients."
+      },
+      "mentor": {
+        "title": "Mentoring & Coaching",
+        "desc": "Personalized guidance toward a healthier lifestyle."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "About me",
+    "name": "Dr. Lucia Gariuc",
+    "title": "Doctor of Medical Sciences",
+    "bio": "I firmly believe that health is not merely the absence of disease, but a deep balance between body, mind and lifestyle. To me, health means harmony, attention and constant care for oneself. In my practice, I aim to shift the perspective on health: not as an imposed obligation, but as a conscious choice and an act of respect toward yourself. Every daily decision matters and contributes to a healthier future. I believe in the importance of medical education and in the power of accurate information. When we learn to listen to our body, we are in fact learning to protect our future. My mission is to turn information into clarity, and clarity into action — offering guidance, support and tailored solutions for every person.",
+    "more": "More about me"
+  },
+  "quotes": {
+    "title": "Daily inspiration",
+    "items": [
+      "Health is the most precious gift — learn to listen to it every day.",
+      "Prevention starts with one question: how do I truly feel today?",
+      "A body that is heard is a body that is protected.",
+      "Medical education turns fear into clarity, and clarity into action."
+    ]
+  },
+  "steps": {
+    "eyebrow": "How we work together",
+    "title": "Five steps toward your health",
+    "items": [
+      {
+        "title": "Reach out",
+        "desc": "Send a message or call directly to discuss your situation."
+      },
+      {
+        "title": "Book a Consultation",
+        "desc": "We choose the most convenient date and time together."
+      },
+      {
+        "title": "Profile Analysis",
+        "desc": "I review your medical history and specific needs."
+      },
+      {
+        "title": "Personalized Plan",
+        "desc": "We set out concrete steps for treatment or prevention."
+      },
+      {
+        "title": "Follow-up & Support",
+        "desc": "I stay by your side throughout the entire process."
+      }
+    ],
+    "cta": "Get in touch"
+  },
+  "newsletter": {
+    "title": "Want to live healthier?",
+    "subtitle": "Enter your name and email to request my free ENT health guide. I will review your request and send it to you shortly.",
+    "name": "Your name",
+    "email": "Email address",
+    "submit": "Request Guide",
+    "success": "Your request has been received! Dr. Lucia Gariuc will review it and email you the guide soon.",
+    "successTitle": "Request Received",
+    "requestAnother": "Request another guide",
+    "error": "An error occurred. Please try again.",
+    "tooManyRequests": "Too many requests. Please try again after 15 minutes."
+  },
+  "appointment": {
+    "eyebrow": "Appointment",
+    "title": "Book a Consultation",
+    "subtitle": "Choose an available time slot and fill in the form.",
+    "selectTime": "Pick a time",
+    "name": "Full name",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message (symptoms, questions)",
+    "submit": "Send Request",
+    "selected": "Selected time",
+    "available": "available",
+    "unavailable": "booked",
+    "success": "Your request has been sent. I'll be in touch soon.",
+    "pickTime": "Please pick an available time."
+  },
+  "testimonials": {
+    "eyebrow": "Patients",
+    "title": "What my patients say",
+    "items": [
+      {
+        "name": "Andrei M.",
+        "text": "Professionalism and empathy. Dr. Lucia explained everything patiently and I left with a clear treatment plan."
+      },
+      {
+        "name": "Maria T.",
+        "text": "I finally feel heard. The diagnosis was precise and recovery much faster than I expected."
+      },
+      {
+        "name": "Elena V.",
+        "text": "An excellent experience for my child. A welcoming office and a wonderful doctor with the little ones."
+      },
+      {
+        "name": "Ștefan P.",
+        "text": "I recommend her with full confidence. Clear communication and concrete solutions, no unnecessary treatments."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "The medicine of the senses — attentive ENT care, education and support for every patient.",
+    "quickLinks": "Quick links",
+    "contact": "Contact",
+    "address": "Chișinău, Republic of Moldova",
+    "follow": "Follow me",
+    "language": "Language",
+    "rights": "© 2026 Dr. Lucia Gariuc. All rights reserved."
+  },
+  "cart": {
+    "addToCart": "Add to Cart",
+    "viewCart": "View Cart",
+    "continueShopping": "Continue Shopping",
+    "yourCart": "Your Cart",
+    "empty": "Your cart is empty.",
+    "total": "Total",
+    "checkout": "Proceed to Checkout",
+    "remove": "Remove",
+    "emailPlaceholder": "Email for digital delivery"
+  }
+}
