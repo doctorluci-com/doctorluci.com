@@ -11,6 +11,8 @@ import stripeRoutes from './routes/stripe.js';
 import subscriptionRoutes from './routes/subscriptions.js';
 import newsletterRoutes from './routes/newsletter.js';
 import downloadRoutes from './routes/download.js';
+import availabilityRoutes from './routes/availability.js';
+import blockedDaysRoutes from './routes/blocked-days.js';
 
 const app = express();
 
@@ -78,6 +80,8 @@ app.use('/api/stripe', stripeRoutes);
 app.use('/api/subscriptions', subscriptionRoutes);
 app.use('/api/newsletter', newsletterRoutes);
 app.use('/api/download', downloadRoutes);
+app.use('/api/availability', availabilityRoutes);
+app.use('/api/blocked-days', blockedDaysRoutes);
 
 // ─── Health check ─────────────────────────────────────────────────────────────
 app.get('/api/health', (_req, res) => {

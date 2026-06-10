@@ -73,6 +73,17 @@ This repository is split into two primary components:
 
 ## 📝 Change Log
 
+### 2026-06-10 (Part 2)
+* **Admin Panel Setup**: Created a standalone Vite/React SPA at `admin.doctorluci.com` configured with Tailwind v4, Lucide React, and React Router.
+* **Appointment Management**: Added a Dashboard to the admin panel for viewing, confirming, cancelling, and deleting appointment requests via backend API integration.
+* **Availability Control**: Implemented a Calendar Settings page in the admin panel to mark specific days as "not working", stored in a new `BlockedDay` database table.
+* **Real-time Frontend Availability**: Updated the `Appointment.tsx` booking flow on `doctorluci.com` to dynamically fetch and disable completely booked slots and blocked days, preventing double-booking and respecting the doctor's schedule.
+
+### 2026-06-10
+* **Interactive Calendar Implementation**: Redesigned the appointment section to feature a highly interactive, dynamic 2-step booking flow using `react-day-picker` and `date-fns`.
+* **Dynamic Time Slots**: Restructured the UI to split into a 5-column calendar picker and a 7-column time-slot grid. Time slots are dynamically generated at 20-minute intervals and are distinctly categorized into **Physical Consultations** (10:00 - 15:40) and **Online Consultations** (16:00 - 19:00).
+* **Custom Availability**: Implemented specific availability logic where only Mondays (1), Wednesdays (3), and Fridays (5) are open for bookings. All past dates are strictly disabled. The selected `preferredDate` is now captured and submitted in ISO format along with the specific 20-minute slot string.
+
 ### 2026-06-03
 * **Secure Book Delivery**: Moved `doctorluci.pdf` to the private `backend/private` directory to prevent unauthorized public downloads. Implemented a new `/api/download/book/:token` backend route that authenticates requests against the `BookPurchase` database records. Updated the Stripe webhook and email templates to dynamically inject the unique `purchase.id` as a secure download token into the buyer's localized email.
 * **Book Sales Section**: Implemented a new digital book sales section in the frontend (`BookPromo.tsx`) featuring a premium glassmorphism design and internationalization (ro, en, ru, es). Integrated Stripe one-time payment checkout through a new backend endpoint (`/api/stripe/create-book-checkout`).

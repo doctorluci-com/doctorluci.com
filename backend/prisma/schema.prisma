@@ -67,3 +67,11 @@ model BookPurchase {
 
   @@index([email])
 }
+
+model BlockedDay {
+  id        String   @id @default(uuid())
+  date      DateTime @unique // Stored as start of the day in UTC
+  reason    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

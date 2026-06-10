@@ -106,6 +106,11 @@
     "title": "Book a Consultation",
     "subtitle": "Choose an available time slot and fill in the form.",
     "selectTime": "Pick a time",
+    "selectDate": "Select Date",
+    "pickDateFirst": "Please select a date on the calendar first",
+    "physical": "Physical Consultation",
+    "online": "Online Consultation",
+    "for": "for",
     "name": "Full name",
     "phone": "Phone",
     "email": "Email",
@@ -115,7 +120,8 @@
     "available": "available",
     "unavailable": "booked",
     "success": "Your request has been sent. I'll be in touch soon.",
-    "pickTime": "Please pick an available time."
+    "pickTime": "Please pick an available time.",
+    "pickDate": "Please select a date first."
   },
   "testimonials": {
     "eyebrow": "Patients",
