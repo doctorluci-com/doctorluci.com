@@ -6,12 +6,13 @@
     "testimonials": "Testimoniale",
     "appointment": "Programare",
     "contact": "Contact",
-    "book": "Programează-te"
+    "book": "Programează-te",
+    "reviews": "Recenzii"
   },
   "hero": {
     "eyebrow": "Medic ORL · Doctor în Științe Medicale",
     "title": "Salut, sunt Lucia Gariuc — Medic ORL",
-    "subtitle": "Medicina simțului și promovarea proiectului social «Kids of Lucia». Îngrijire ORL atentă, ghidare clară și sprijin pentru fiecare pacient.",
+    "subtitle": "Medicina Simțului și promovarea proiectului social «Kids of Lucia». Îngrijire ORL atentă, ghidare clară și sprijin pentru fiecare pacient. Suport medical pentru Mămici. Cum creștem o societate sănătoasă biologic și sufletește.",
     "ctaPrimary": "Programează-te",
     "ctaSecondary": "Află mai multe",
     "imageAlt": "Dr. Lucia Gariuc, medic ORL"
@@ -124,29 +125,68 @@
     "pickDate": "Te rog selectează o dată mai întâi."
   },
   "testimonials": {
-    "eyebrow": "Pacienți",
-    "title": "Ce spun pacienții mei",
+    "title": "Feedback",
+    "titleItalic": "clienților",
+    "subtitle": "Descoperă ce apreciază pacienții mei la noi",
     "items": [
       {
-        "name": "Andrei M.",
-        "text": "Profesionalism și empatie. Dr. Lucia a explicat totul cu răbdare și am plecat cu un plan clar de tratament."
+        "name": "Irina Păduraru",
+        "text": "Doresc să vă mulțumesc din suflet pentru suportul și îndrumarea oferite în gestionarea problemelor respiratorii ale băiatului meu. Datorită recomandărilor și atenției dumneavoastră, această primăvară a fost cu adevărat diferită pentru el. Spre deosebire de anii precedenți, nu a mai avut reacțiile alergice severe care îi afectau starea de bine și activitățile zilnice. A reușit să respire ușor, fără mâncărimi ale ochilor, nasului și fără alte manifestări specifice alergiilor.",
+        "source": "WhatsApp",
+        "date": "14.05.2026"
       },
       {
-        "name": "Maria T.",
-        "text": "Mă simt în sfârșit ascultată. Diagnosticul a fost precis, iar recuperarea mult mai rapidă decât mă așteptam."
+        "name": "Diana Munteanu",
+        "text": "Cu ajutorul dumneavoastră am reușit să identificăm cauza acestor reacții și să îi oferim sprijinul necesar pentru o dezvoltare armonioasă, fără a interveni inutil în procesele firești ale organismului său. Vă suntem profund recunoscători pentru profesionalismul, dedicarea și grija cu care ne-ați însoțit pe acest parcurs. Vă mulțumim din inimă!",
+        "source": "WhatsApp",
+        "date": "02.06.2026"
       },
       {
-        "name": "Elena V.",
-        "text": "O experiență excelentă pentru copilul meu. Cabinet primitor și o doctoriță minunată cu cei mici."
+        "name": "Nicoleta Ț.",
+        "text": "Exact aşa blinele îi făceam unui băiețel bolnav de autism cît îi eram bonă. Asta pînă a sta cu Leo. Datorită faptului că s-a exclus lactatea, glutenul și zahărul copilul încet a început să fie mai bine.",
+        "source": "WhatsApp",
+        "date": "28.05.2026"
       },
       {
-        "name": "Ștefan P.",
-        "text": "Recomand cu toată încrederea. Comunicare clară și soluții concrete, fără tratamente inutile."
+        "name": "Simona R.",
+        "text": "Vreau sa revin la dvs cu o profunda recunoștință fata de dvs referitor la ajutorul acordat și încrederea în mine care ați avut-o ca o pot ajuta pe Adela cu adenoizii și nu m-ați trimis sa-i scot. În timp de un an de la 85% a ajuns la 70%. Calea spre vindecare este lunga dar știu ce am de făcut. Sfaturile dvs sunt magice( permiteți-mi sa le spun asa). Aveți grija de dvs pentru ca noi avem nevoie de asa medic ca dvs",
+        "source": "WhatsApp",
+        "date": "11.06.2026"
+      },
+      {
+        "name": "Andreea C.",
+        "text": "Va Multumesc! Întâlnirea de aseară a fost tare faina. Continuaţi, prea multe femei va simt la fel cum și eu - asta spune ceva despre Dvs. și poate și despre menirea Dvs aici.",
+        "source": "WhatsApp",
+        "date": "09.06.2026"
+      },
+      {
+        "name": "Natalia S.",
+        "text": "D. Lucia vă mulțumesc sincer pentru dedicarea și profesionalismul cu care ați avut grijă de sănătatea copilașului nostru și a mea! Sunteți un medic extraordinar, iar eu vă voi fi mereu profund recunoscătoare pentru sprijinul oferit! Vă iubim vă dorim o zi minutată plină de momente și surprize placute!",
+        "source": "WhatsApp",
+        "date": "21.05.2026"
+      },
+      {
+        "name": "Valentina D.",
+        "text": "Doamna Lucia, buna ziua! Noi mai avem o fetita cea mare se simte foarte bine, noaptea cand respira uneori ne punem sa ascultam nu se aude deloc.. dar asta mica are urechiusele un pic diferite.. puteti sa-mi spuneti va rog daca ati mai intilnit asa?",
+        "source": "WhatsApp",
+        "date": "10.06.2026"
+      },
+      {
+        "name": "Mihaela L.",
+        "text": "Bună ziua! Am vrut să vă mulțumesc din inimă pentru felul în care m-ați ghidat și încurajat! Pe tot parcursul răcelii eram atât de calmă, deși uneori îmi apărea și frica. Mulțumesc pentru sfaturile valoroase! Urmând pașii d-voastră, după 4 zile de chin respir fără niciun spray și sunt atât de mândră că am folosit doar produse naturiste și totul a trecut în mai puțin de o săptămână.",
+        "source": "WhatsApp",
+        "date": "05.06.2026"
+      },
+      {
+        "name": "Tatiana Ț.",
+        "text": "Bună ziua d.Lucia! Am fost la masajul terapeutic la Natalia. Am rugato în timpul masajului să vorbeasca cu mine și a fost foarte plăcută procedura și toată discuția care am avuto cu ea. De fiecare dată mă conving că fiecare pas pe care îl urmez de fiecare dată pe care dumneavoastre mă gidați este pentru mine o plăcere enormă! La d.Anatol am fost cu baiatul mai mare la fel am ramas foarte mulțumită. Mă mîndresc că vă am alături de aproape de sufletul meu. Vă iubim mai ales eu și Nicolas mereu îi amintesc de dumneavoastre și vin cu exemple că dacă vrem să fim sănătoși trebuie să fim atenți la ce mîncăm și el și abține de la unele pofteși îmi spune bine! Vă doresc să aveți mereu doar îmliniri frumoase sunteți deosebită un Soare care mă încalziți mereu cu blîndețe.",
+        "source": "WhatsApp",
+        "date": "10.06.2026"
       }
     ]
   },
   "footer": {
-    "tagline": "Medicina simțului — îngrijire ORL atentă, educație și sprijin pentru fiecare pacient.",
+    "tagline": "Medicina Simțului — îngrijire ORL atentă, educație și sprijin pentru fiecare pacient.",
     "quickLinks": "Linkuri rapide",
     "contact": "Contact",
     "address": "Chișinău, Republica Moldova",
@@ -164,5 +204,10 @@
     "checkout": "Finalizează comanda",
     "remove": "Elimină",
     "emailPlaceholder": "Email pentru livrarea digitală"
+  },
+  "reviewsPage": {
+    "title": "Păreri și Experiențe",
+    "subtitle": "Părerile celor care au ales să aibă grijă de sănătatea lor alături de mine.",
+    "cta": "Programează o Consultație"
   }
 }

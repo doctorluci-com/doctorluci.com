@@ -16,6 +16,15 @@ import blockedDaysRoutes from './routes/blocked-days.js';
 
 const app = express();
 
+// ─── Global Error Logging ──────────────────────────────────────────────────
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
+process.on('uncaughtException', (error) => {
+  console.error('Uncaught Exception:', error);
+});
+
 // Trust Nginx reverse proxy headers (e.g., X-Forwarded-For)
 app.set('trust proxy', 1);
 

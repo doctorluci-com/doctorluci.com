@@ -6,12 +6,13 @@
     "testimonials": "Testimonios",
     "appointment": "Cita",
     "contact": "Contacto",
-    "book": "Reservar cita"
+    "book": "Reservar cita",
+    "reviews": "Reseñas"
   },
   "hero": {
     "eyebrow": "Médico ORL · Doctora en Ciencias Médicas",
     "title": "Hola, soy Lucia Gariuc — Médico ORL",
-    "subtitle": "La medicina de los sentidos y la iniciativa social «Kids of Lucia». Atención ORL cuidadosa, orientación clara y apoyo para cada paciente.",
+    "subtitle": "Medicina del Sentido y la iniciativa social «Kids of Lucia». Atención ORL cuidadosa, orientación clara y apoyo para cada paciente. Apoyo médico para madres. Cómo criamos una sociedad biológicamente y espiritualmente sana.",
     "ctaPrimary": "Reservar cita",
     "ctaSecondary": "Saber más",
     "imageAlt": "Dra. Lucia Gariuc, médico ORL"
@@ -124,29 +125,68 @@
     "pickDate": "Por favor, selecciona una fecha primero."
   },
   "testimonials": {
-    "eyebrow": "Pacientes",
-    "title": "Lo que dicen mis pacientes",
+    "title": "Comentarios",
+    "titleItalic": "de los clientes",
+    "subtitle": "Descubre lo que nuestros pacientes aprecian de nosotros",
     "items": [
       {
-        "name": "Andrei M.",
-        "text": "Profesionalismo y empatía. La Dra. Lucia me lo explicó todo con paciencia y salí con un plan de tratamiento claro."
+        "name": "Irina Păduraru",
+        "text": "Quiero agradecerle de todo corazón por el apoyo y la orientación brindada en el manejo de los problemas respiratorios de mi niño. Gracias a sus recomendaciones, esta primavera fue realmente diferente para él. Logró respirar con facilidad, sin picazón en los ojos ni en la nariz.",
+        "source": "WhatsApp",
+        "date": "14.05.2026"
       },
       {
-        "name": "Maria T.",
-        "text": "Por fin me sentí escuchada. El diagnóstico fue preciso y la recuperación mucho más rápida de lo esperado."
+        "name": "Diana Munteanu",
+        "text": "Con su ayuda logramos identificar la causa de estas reacciones y ofrecerle el apoyo necesario para un desarrollo armonioso. Estamos profundamente agradecidos por su profesionalismo, dedicación y cuidado.",
+        "source": "WhatsApp",
+        "date": "02.06.2026"
       },
       {
-        "name": "Elena V.",
-        "text": "Una experiencia excelente para mi hijo. Consulta acogedora y una doctora maravillosa con los pequeños."
+        "name": "Nicoleta Ț.",
+        "text": "Exactamente así le hacía panqueques a un niño autista cuando era su niñera. Gracias a la exclusión de lácteos, gluten y azúcar, el niño empezó a mejorar lentamente.",
+        "source": "WhatsApp",
+        "date": "28.05.2026"
       },
       {
-        "name": "Ștefan P.",
-        "text": "La recomiendo con total confianza. Comunicación clara y soluciones concretas, sin tratamientos innecesarios."
+        "name": "Simona R.",
+        "text": "Quiero volver a usted con profunda gratitud por la ayuda brindada y la confianza. Sus consejos son mágicos. Cuídese porque necesitamos médicos como usted.",
+        "source": "WhatsApp",
+        "date": "11.06.2026"
+      },
+      {
+        "name": "Andreea C.",
+        "text": "¡Gracias! La reunión de anoche fue muy agradable. Siga adelante, muchas mujeres la sienten igual que yo.",
+        "source": "WhatsApp",
+        "date": "09.06.2026"
+      },
+      {
+        "name": "Natalia S.",
+        "text": "¡Dra. Lucia, le agradezco sinceramente la dedicación y profesionalidad con la que cuidó la salud de nuestro hijo y la mía! ¡Es una médica extraordinaria!",
+        "source": "WhatsApp",
+        "date": "21.05.2026"
+      },
+      {
+        "name": "Valentina D.",
+        "text": "¡Hola Dra. Lucia! Nuestra niña mayor se siente muy bien, por la noche cuando respira a veces escuchamos y no se oye nada... pero la pequeña tiene las orejitas un poco diferentes.. ¿me puede decir si se ha encontrado con esto antes?",
+        "source": "WhatsApp",
+        "date": "10.06.2026"
+      },
+      {
+        "name": "Mihaela L.",
+        "text": "¡Hola! ¡Quería agradecerle de todo corazón por cómo me guió y animó! Siguiendo sus pasos, después de 4 días de agonía respiro sin ningún spray y estoy muy orgullosa de haber usado solo productos naturales.",
+        "source": "WhatsApp",
+        "date": "05.06.2026"
+      },
+      {
+        "name": "Tatiana Ț.",
+        "text": "¡Hola Dra. Lucia! Fui a un masaje terapéutico con Natalia. Le pedí que hablara conmigo durante el masaje y el procedimiento y toda la discusión que tuvimos fue muy agradable. ¡Cada vez estoy más convencida de que cada paso que sigo cada vez que me guía es un placer enorme para mí! Fui al Dr. Anatol con mi hijo mayor y también quedé muy satisfecha. Estoy orgullosa de tenerla cerca de mi alma. ¡La amamos, especialmente Nicolas y yo, siempre le recuerdo a usted y le doy ejemplos de que si queremos estar sanos debemos tener cuidado con lo que comemos y él se abstiene de algunos antojos y me dice bien! Le deseo siempre solo hermosos logros, es especial, un Sol que siempre me calienta con gentileza.",
+        "source": "WhatsApp",
+        "date": "10.06.2026"
       }
     ]
   },
   "footer": {
-    "tagline": "La medicina de los sentidos — atención ORL cuidadosa, educación y apoyo para cada paciente.",
+    "tagline": "Medicina del Sentido — atención ORL cuidadosa, educación y apoyo para cada paciente.",
     "quickLinks": "Enlaces rápidos",
     "contact": "Contacto",
     "address": "Chișinău, República de Moldavia",
@@ -164,5 +204,10 @@
     "checkout": "Finalizar compra",
     "remove": "Eliminar",
     "emailPlaceholder": "Correo electrónico"
+  },
+  "reviewsPage": {
+    "title": "Reseñas y Experiencias",
+    "subtitle": "Las opiniones de quienes decidieron cuidar su salud conmigo.",
+    "cta": "Reservar una Consulta"
   }
 }

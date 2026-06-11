@@ -6,6 +6,7 @@ export const AppointmentSchema = z.object({
   email: z.string().trim().email('Invalid email address').max(160, 'Email must not exceed 160 characters'),
   message: z.string().trim().max(2000, 'Message must not exceed 2000 characters').optional().nullable(),
   slot: z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/, 'Invalid time slot format. Must be HH:mm'),
+  preferredDate: z.string().optional().nullable(),
 });
 
 export type AppointmentInput = z.infer<typeof AppointmentSchema>;

@@ -2,12 +2,28 @@ import { Router, Request, Response, NextFunction } from 'express';
 import { z } from 'zod';
 import { db } from '../db.js';
 import { requireAdmin } from '../middleware/auth.js';
-import { startOfDay, parseISO } from 'date-fns';
 
 const router = Router();
 
+/**
+ * Helper: parse a date string (either "YYYY-MM-DD" or a full ISO datetime)
+ * and always return a Date pinned to UTC midnight of that calendar day.
+ * This avoids day-shifting that occurs when date-fns startOfDay()
+ * interprets the value in the server's local timezone.
+ */
+function toUTCMidnight(dateStr: string): Date {
+  // Extract just the YYYY-MM-DD portion regardless of input format
+  const dayPart = dateStr.substring(0, 10); // "2026-08-10"
+  const [y, m, d] = dayPart.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d)); // UTC midnight
+}
+
 const BlockDaySchema = z.object({
-  date: z.string().datetime(), // ISO string
+  // Accept both "YYYY-MM-DD" and full ISO datetime strings
+  date: z.string().refine(
+    (val) => /^\d{4}-\d{2}-\d{2}/.test(val),
+    { message: 'date must start with YYYY-MM-DD format' }
+  ),
   reason: z.string().optional(),
 });
 
@@ -35,7 +51,7 @@ router.post('/', requireAdmin, async (req: Request, res: Response, next: NextFun
       });
     }
 
-    const date = startOfDay(parseISO(parsed.data.date));
+    const date = toUTCMidnight(parsed.data.date);
 
     // Upsert to avoid duplicates
     const blockedDay = await db.blockedDay.upsert({

@@ -6,12 +6,13 @@
     "testimonials": "Testimonials",
     "appointment": "Appointment",
     "contact": "Contact",
-    "book": "Book Appointment"
+    "book": "Book Appointment",
+    "reviews": "Reviews"
   },
   "hero": {
     "eyebrow": "ENT Physician · Doctor of Medical Sciences",
     "title": "Hello, I'm Lucia Gariuc — ENT Physician",
-    "subtitle": "The medicine of the senses and the social initiative «Kids of Lucia». Attentive ENT care, clear guidance and support for every patient.",
+    "subtitle": "Medicine of Sense and the social initiative «Kids of Lucia». Attentive ENT care, clear guidance and support for every patient. Medical support for mothers. How to raise a biologically and spiritually healthy society.",
     "ctaPrimary": "Book a visit",
     "ctaSecondary": "Learn more",
     "imageAlt": "Dr. Lucia Gariuc, ENT physician"
@@ -124,29 +125,68 @@
     "pickDate": "Please select a date first."
   },
   "testimonials": {
-    "eyebrow": "Patients",
-    "title": "What my patients say",
+    "title": "Client",
+    "titleItalic": "feedback",
+    "subtitle": "Discover what my patients appreciate about us",
     "items": [
       {
-        "name": "Andrei M.",
-        "text": "Professionalism and empathy. Dr. Lucia explained everything patiently and I left with a clear treatment plan."
+        "name": "Irina Păduraru",
+        "text": "I want to thank you from the bottom of my heart for the support and guidance provided in managing my boy's respiratory problems. Thanks to your recommendations, this spring was truly different for him. He managed to breathe easily, without itchy eyes or nose.",
+        "source": "WhatsApp",
+        "date": "14.05.2026"
       },
       {
-        "name": "Maria T.",
-        "text": "I finally feel heard. The diagnosis was precise and recovery much faster than I expected."
+        "name": "Diana Munteanu",
+        "text": "With your help we managed to identify the cause of these reactions and offer him the necessary support for harmonious development, without intervening unnecessarily in his body's natural processes. We are deeply grateful for your professionalism and care.",
+        "source": "WhatsApp",
+        "date": "02.06.2026"
       },
       {
-        "name": "Elena V.",
-        "text": "An excellent experience for my child. A welcoming office and a wonderful doctor with the little ones."
+        "name": "Nicoleta Ț.",
+        "text": "That's exactly how I used to make pancakes for an autistic boy when I was his nanny. Thanks to excluding dairy, gluten and sugar, the child slowly started getting better.",
+        "source": "WhatsApp",
+        "date": "28.05.2026"
       },
       {
-        "name": "Ștefan P.",
-        "text": "I recommend her with full confidence. Clear communication and concrete solutions, no unnecessary treatments."
+        "name": "Simona R.",
+        "text": "I want to return to you with profound gratitude regarding the help provided and the trust you had that I can help Adela with her adenoids without removing them. Your advice is magic. Take care of yourself because we need doctors like you.",
+        "source": "WhatsApp",
+        "date": "11.06.2026"
+      },
+      {
+        "name": "Andreea C.",
+        "text": "Thank you! Last night's meeting was very nice. Keep going, too many women feel you just like I do - that says something about you and maybe your purpose here.",
+        "source": "WhatsApp",
+        "date": "09.06.2026"
+      },
+      {
+        "name": "Natalia S.",
+        "text": "Dr. Lucia, I sincerely thank you for the dedication and professionalism with which you took care of our child's health and mine! You are an extraordinary doctor, and I will always be deeply grateful for your support!",
+        "source": "WhatsApp",
+        "date": "21.05.2026"
+      },
+      {
+        "name": "Valentina D.",
+        "text": "Hello Dr. Lucia! Our older girl feels very well, when she breathes at night we sometimes listen and you can't hear anything.. but the little one has slightly different ears.. can you tell me if you've encountered this before?",
+        "source": "WhatsApp",
+        "date": "10.06.2026"
+      },
+      {
+        "name": "Mihaela L.",
+        "text": "Hello! I wanted to thank you from the bottom of my heart for how you guided and encouraged me! Following your steps, after 4 days of agony I breathe without any spray and I'm so proud I used only natural products.",
+        "source": "WhatsApp",
+        "date": "05.06.2026"
+      },
+      {
+        "name": "Tatiana Ț.",
+        "text": "Hello Dr. Lucia! I went for a therapeutic massage with Natalia. I asked her to talk to me during the massage and the procedure and all the discussion we had was very pleasant. Every time I am convinced that every step I follow every time you guide me is an enormous pleasure for me! I went to Dr. Anatol with my older boy and I was also very satisfied. I am proud to have you close to my soul. We love you, especially Nicolas and I, I always remind him of you and give examples that if we want to be healthy we must be careful what we eat and he refrains from some cravings and tells me well! I wish you always only beautiful achievements, you are special, a Sun that always warms me with gentleness.",
+        "source": "WhatsApp",
+        "date": "10.06.2026"
       }
     ]
   },
   "footer": {
-    "tagline": "The medicine of the senses — attentive ENT care, education and support for every patient.",
+    "tagline": "Medicine of Sense — attentive ENT care, education and support for every patient.",
     "quickLinks": "Quick links",
     "contact": "Contact",
     "address": "Chișinău, Republic of Moldova",
@@ -164,5 +204,10 @@
     "checkout": "Proceed to Checkout",
     "remove": "Remove",
     "emailPlaceholder": "Email for digital delivery"
+  },
+  "reviewsPage": {
+    "title": "Reviews and Experiences",
+    "subtitle": "The opinions of those who chose to take care of their health with me.",
+    "cta": "Book a Consultation"
   }
 }

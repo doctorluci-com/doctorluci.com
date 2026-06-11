@@ -51,7 +51,11 @@ export function Appointment() {
   useEffect(() => {
     fetch(`${apiUrl}/api/availability/blocked-days`)
       .then((res) => res.json())
-      .then((data: string[]) => setBlockedDays(data.map(d => new Date(d))))
+      .then((data: string[]) => setBlockedDays(data.map(d => {
+        // Parse YYYY-MM-DD as a local date (not UTC) to match the calendar's local dates
+        const [y, m, day] = d.split('-').map(Number);
+        return new Date(y, m - 1, day);
+      })))
       .catch((err) => console.error("Failed to fetch blocked days:", err));
   }, [apiUrl]);
 
@@ -94,7 +98,12 @@ export function Appointment() {
       const res = await fetch(`${apiUrl}/api/appointments`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, slot, preferredDate: date.toISOString() }),
+        body: JSON.stringify({
+          ...form,
+          slot,
+          // Send as YYYY-MM-DD to avoid timezone shifts from toISOString()
+          preferredDate: `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}T00:00:00.000Z`,
+        }),
       });
       if (!res.ok) {
         const err = await res.json().catch(() => ({}));
@@ -188,7 +197,11 @@ export function Appointment() {
                   locale={getLocale()}
                   disabled={(day) => {
                     const isPast = isBefore(day, startOfDay(new Date()));
-                    const isBlocked = blockedDays.some(b => b.getTime() === startOfDay(day).getTime());
+                    const isBlocked = blockedDays.some(b =>
+                      b.getFullYear() === day.getFullYear() &&
+                      b.getMonth() === day.getMonth() &&
+                      b.getDate() === day.getDate()
+                    );
                     
                     const dayOfWeek = day.getDay();
                     let isOffDay = false;

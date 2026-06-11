@@ -64,7 +64,7 @@ export function Hero() {
                 alt={t("hero.imageAlt")}
                 width={1024}
                 height={1024}
-                className="aspect-[556/936] w-full h-auto object-cover"
+                className="aspect-[682/1024] w-full h-auto object-cover"
               />
               <div className="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-2xl bg-background/85 p-3 backdrop-blur-md">
                 <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground text-sm font-bold">

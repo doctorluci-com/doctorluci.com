@@ -255,6 +255,53 @@ export function buildPatientConfirmedEmailHtml(appointment: {
   return emailShell(body);
 }
 
+export function buildPatientRejectedEmailHtml(appointment: {
+  name: string;
+  slot: string;
+}) {
+  const body = `
+    <div style="text-align:center;margin-bottom:24px;">
+      <div style="display:inline-block;width:56px;height:56px;background:linear-gradient(135deg,#fef2f2,#fee2e2);border-radius:50%;line-height:56px;text-align:center;">
+        <span style="font-size:28px;">❌</span>
+      </div>
+    </div>
+    <h2 style="margin:0 0 6px;font-family:Georgia,'Times New Roman',serif;font-size:22px;color:#1e2a35;text-align:center;">Programare Anulată</h2>
+    
+    <div style="margin:24px 0;padding:24px;background:linear-gradient(135deg,#fff1f2 0%,#fff5f5 100%);border-radius:12px;border-left:4px solid #e11d48;">
+      <p style="margin:0 0 12px;font-size:15px;color:#1e2a35;">Bună ziua, <strong>${escapeHtml(appointment.name)}</strong>,</p>
+      <p style="margin:0 0 12px;font-size:14px;color:#374151;line-height:1.6;">Vă informăm că cererea dumneavoastră de programare la cabinetul <strong>Dr. Lucia Gariuc</strong> pentru ora <strong>${escapeHtml(appointment.slot)}</strong> nu a putut fi confirmată sau a fost anulată.</p>
+      <p style="margin:0;font-size:14px;color:#374151;line-height:1.6;">Acest lucru se poate datora unei suprapuneri în program sau a unor modificări neprevăzute în disponibilitate.</p>
+    </div>
+
+    <!-- Appointment slot info -->
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;margin-bottom:24px;">
+      <tr>
+        <td style="padding:16px 20px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td style="padding:6px 0;border-bottom:1px solid #f0f0f0;">
+                <span style="font-size:11px;color:#9ca3af;text-transform:uppercase;letter-spacing:0.8px;font-weight:600;">Ora Solicitată</span><br>
+                <span style="font-size:15px;color:#4b5563;text-decoration:line-through;">${escapeHtml(appointment.slot)}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:6px 0;">
+                <span style="font-size:11px;color:#9ca3af;text-transform:uppercase;letter-spacing:0.8px;font-weight:600;">Statut Programare</span><br>
+                <span style="display:inline-block;margin-top:4px;padding:3px 10px;background:#ffe4e6;color:#9f1239;font-size:12px;font-weight:700;border-radius:20px;letter-spacing:0.5px;">Anulată</span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <p style="margin:0 0 16px;font-size:14px;color:#4b5563;line-height:1.6;">Ne cerem scuze pentru eventualele neplăceri. Vă rugăm să încercați să alegeți un alt interval orar sau să ne contactați direct pentru asistență.</p>
+
+    <p style="margin:24px 0 0;font-size:14px;color:#1e2a35;">Cu respect,<br><strong style="color:#0d6e6e;">Dr. Lucia Gariuc</strong></p>
+  `;
+  return emailShell(body);
+}
+
 export function buildNewsletterEmailHtml(name: string, lang = 'ro') {
   const normalizedLang = (lang || 'ro').toLowerCase().slice(0, 2);
 

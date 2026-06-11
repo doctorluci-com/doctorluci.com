@@ -1,13 +1,70 @@
 import { db } from '../db.js';
 import { AppointmentInput } from '../schemas/appointment.js';
 import { AppointmentStatus } from '@prisma/client';
-import { sendEmail, buildDoctorEmailHtml, buildPatientEmailHtml, buildPatientConfirmedEmailHtml } from './mailer.js';
+import {
+  sendEmail,
+  buildDoctorEmailHtml,
+  buildPatientEmailHtml,
+  buildPatientConfirmedEmailHtml,
+  buildPatientRejectedEmailHtml,
+} from './mailer.js';
 import { env } from '../env.js';
 import { pino } from 'pino';
 
 const logger = pino();
 
+/**
+ * Parse a date string (YYYY-MM-DD or full ISO) to UTC midnight.
+ * Returns null if the input is falsy or invalid.
+ */
+function toUTCMidnight(dateStr: string | null | undefined): Date | null {
+  if (!dateStr) return null;
+  const dayPart = dateStr.substring(0, 10); // "YYYY-MM-DD"
+  const [y, m, d] = dayPart.split('-').map(Number);
+  if (isNaN(y) || isNaN(m) || isNaN(d)) return null;
+  return new Date(Date.UTC(y, m - 1, d));
+}
+
+/**
+ * Check if a given date + slot already has a CONFIRMED or PENDING appointment.
+ * Returns the conflicting appointment if found, or null otherwise.
+ * Optionally excludes a specific appointment ID (for self-checks during status updates).
+ */
+async function findSlotConflict(
+  preferredDate: Date,
+  slot: string,
+  excludeId?: string,
+) {
+  const nextDay = new Date(preferredDate.getTime() + 24 * 60 * 60 * 1000);
+
+  const where: any = {
+    preferredDate: { gte: preferredDate, lt: nextDay },
+    slot,
+    status: { in: [AppointmentStatus.CONFIRMED, AppointmentStatus.PENDING] },
+  };
+
+  if (excludeId) {
+    where.id = { not: excludeId };
+  }
+
+  return db.appointment.findFirst({ where });
+}
+
 export async function createAppointment(data: AppointmentInput) {
+  const parsedDate = toUTCMidnight(data.preferredDate);
+
+  // --- Double-booking guard at submission time ---
+  if (parsedDate) {
+    const conflict = await findSlotConflict(parsedDate, data.slot);
+    if (conflict) {
+      const err = new Error(
+        `Slot ${data.slot} on this date is already booked or pending confirmation.`
+      );
+      (err as any).statusCode = 409;
+      throw err;
+    }
+  }
+
   // 1. Persist the appointment to the database with status = PENDING
   const appointment = await db.appointment.create({
     data: {
@@ -16,6 +73,7 @@ export async function createAppointment(data: AppointmentInput) {
       email: data.email,
       message: data.message,
       slot: data.slot,
+      preferredDate: parsedDate,
       status: AppointmentStatus.PENDING,
     },
   });
@@ -24,6 +82,7 @@ export async function createAppointment(data: AppointmentInput) {
   logger.info({
     appointmentId: appointment.id,
     slot: appointment.slot,
+    preferredDate: parsedDate?.toISOString(),
     status: appointment.status,
   }, 'Appointment successfully created in database');
 
@@ -86,6 +145,30 @@ export async function listAppointments(filters: {
 }
 
 export async function updateAppointmentStatus(id: string, status: AppointmentStatus) {
+  // --- Double-booking guard at confirmation time ---
+  if (status === AppointmentStatus.CONFIRMED) {
+    const appointment = await db.appointment.findUnique({ where: { id } });
+    if (!appointment) {
+      const err = new Error('Appointment not found');
+      (err as any).statusCode = 404;
+      throw err;
+    }
+
+    if (appointment.preferredDate) {
+      const dateAtMidnight = toUTCMidnight(appointment.preferredDate.toISOString());
+      if (dateAtMidnight) {
+        const conflict = await findSlotConflict(dateAtMidnight, appointment.slot, id);
+        if (conflict) {
+          const err = new Error(
+            `Cannot confirm: slot ${appointment.slot} on this date is already ${conflict.status === AppointmentStatus.CONFIRMED ? 'confirmed' : 'pending'} for another patient (${conflict.name}).`
+          );
+          (err as any).statusCode = 409;
+          throw err;
+        }
+      }
+    }
+  }
+
   const appointment = await db.appointment.update({
     where: { id },
     data: { status },
@@ -93,19 +176,40 @@ export async function updateAppointmentStatus(id: string, status: AppointmentSta
 
   logger.info({ appointmentId: id, newStatus: status }, 'Appointment status updated');
 
-  if (status === AppointmentStatus.CONFIRMED) {
+  // Trigger asynchronous email notifications based on the new status
+  if (status === AppointmentStatus.CONFIRMED || status === AppointmentStatus.CANCELLED) {
     Promise.resolve().then(async () => {
-      const html = buildPatientConfirmedEmailHtml({
-        name: appointment.name,
-        slot: appointment.slot,
-      });
+      let html = '';
+      let subject = '';
+
+      if (status === AppointmentStatus.CONFIRMED) {
+        subject = 'Confirmarea programării dumneavoastră — Dr. Lucia Gariuc';
+        html = buildPatientConfirmedEmailHtml({
+          name: appointment.name,
+          slot: appointment.slot,
+        });
+      } else {
+        subject = 'Anularea programării dumneavoastră — Dr. Lucia Gariuc';
+        html = buildPatientRejectedEmailHtml({
+          name: appointment.name,
+          slot: appointment.slot,
+        });
+      }
+
+      logger.debug({ appointmentId: id, status, recipient: appointment.email }, 'Attempting to send status update email');
+
       await sendEmail({
         to: appointment.email,
-        subject: 'Confirmarea programării dumneavoastră — Dr. Lucia Gariuc',
+        subject,
         html,
       });
     }).catch((err) => {
-      logger.error({ error: err, appointmentId: id }, 'Failed to send confirmation email to patient');
+      logger.error({
+        error: err instanceof Error ? err.message : String(err),
+        stack: err instanceof Error ? err.stack : undefined,
+        appointmentId: id,
+        targetStatus: status
+      }, 'Critical failure in the async status email notification pipeline');
     });
   }
 
@@ -120,3 +224,4 @@ export async function deleteAppointment(id: string) {
   logger.info({ appointmentId: id }, 'Appointment permanently deleted');
   return appointment;
 }
+

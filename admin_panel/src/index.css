@@ -12,10 +12,49 @@
   --color-border: #e2e8f0;
   --color-card: #ffffff;
   --color-card-foreground: #020817;
+
+  --animate-fade-in: fadeIn 0.2s ease-out;
+  --animate-slide-up: slideUp 0.25s ease-out;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Sheet / Modal animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 100px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Ensure the react-day-picker fits nicely on mobile */
+.rdp {
+  --rdp-cell-size: 40px;
+}
+
+@media (max-width: 640px) {
+  .rdp {
+    --rdp-cell-size: 36px;
+    font-size: 14px;
+  }
 }

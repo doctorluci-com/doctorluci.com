@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { DayPicker } from 'react-day-picker';
-import { format, startOfDay } from 'date-fns';
+import { format } from 'date-fns';
 import { Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { api } from '../lib/api';
@@ -40,7 +40,7 @@ export function CalendarSettings() {
       await api.request('/blocked-days', {
         method: 'POST',
         body: JSON.stringify({
-          date: startOfDay(selectedDate).toISOString(),
+          date: format(selectedDate, 'yyyy-MM-dd'),
           reason: reason || undefined,
         }),
       });
@@ -65,17 +65,20 @@ export function CalendarSettings() {
     }
   };
 
-  const blockedDates = blockedDays.map(b => new Date(b.date));
+  const blockedDates = blockedDays.map(b => {
+    const [y, m, d] = b.date.substring(0, 10).split('-');
+    return new Date(+y, +m - 1, +d);
+  });
 
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-3xl font-serif text-primary">Calendar Settings</h2>
-        <p className="text-muted-foreground mt-2">Mark days when you are not working to prevent appointments.</p>
+        <h2 className="text-2xl sm:text-3xl font-serif text-primary">Calendar Settings</h2>
+        <p className="text-muted-foreground mt-2 text-sm sm:text-base">Mark days when you are not working to prevent appointments.</p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-card rounded-2xl border border-border shadow-sm p-6 flex flex-col items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div className="bg-card rounded-2xl border border-border shadow-sm p-4 sm:p-6 flex flex-col items-center overflow-x-auto">
           <DayPicker
             mode="single"
             selected={selectedDate}
@@ -119,7 +122,12 @@ export function CalendarSettings() {
               {blockedDays.map(day => (
                 <div key={day.id} className="flex items-center justify-between p-3 rounded-xl border border-border bg-secondary/20">
                   <div>
-                    <p className="font-medium text-primary">{format(new Date(day.date), 'MMMM do, yyyy')}</p>
+                    <p className="font-medium text-primary">
+                      {(() => {
+                        const [y, m, d] = day.date.substring(0, 10).split('-');
+                        return format(new Date(+y, +m - 1, +d), 'MMMM do, yyyy');
+                      })()}
+                    </p>
                     {day.reason && <p className="text-xs text-muted-foreground mt-1">{day.reason}</p>}
                   </div>
                   <button
